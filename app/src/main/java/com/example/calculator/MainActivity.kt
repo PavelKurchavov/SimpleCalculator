@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         archivedExpressionsTextView.movementMethod = ScrollingMovementMethod()
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         val buttons = listOf(btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAC,btnBackspace, btnPoint, btnPlus, btnMinus, btnMultiply, btnDivision, btnEqual, btnPercent)
         buttons.forEach { it.setOnClickListener(this) }
     }
@@ -27,25 +29,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnAC -> text = ""
             R.id.btnBackspace -> if (text.isNotEmpty()) text = text.substring(0, text.length - 1)
             R.id.btnEqual, R.id.btnPercent -> {
-                text = interpreter.calculateResult(v, text.toString()).toString()
+                text = interpreter.calculateResult(v, text.toString())
                 archivedExpressionsTextView.append("${v.text} ${text}\n")
             }
             else -> append(v.text)
         }
     }
 
-    private fun Interpreter.calculateResult(button: Button, expression: String): Double {
+    private fun Interpreter.calculateResult(button: Button, expression: String): String {
         val validExpression = expression.replace("×", "*").replace("÷", "/")
-        var result = 0.0
-        try {
-            result = when (button.id) {
-                R.id.btnPercent -> eval("(${validExpression})/100.0").toString().toDouble()
-                else -> eval(validExpression).toString().toDouble()
-            }
+        return try {
+            if (button.id == R.id.btnPercent) eval("(${validExpression})/100.0").toString() else eval("1.0 * $validExpression").toString()
         } catch (e: Exception) {
             incorrectExpressionHandle()
+            ""
         }
-        return result
     }
 
     private fun incorrectExpressionHandle() {

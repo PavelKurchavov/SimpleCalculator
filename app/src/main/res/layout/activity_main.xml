@@ -42,9 +42,10 @@
             android:orientation="horizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp" android:id="@+id/linearLayout4">
+            android:id="@+id/linearLayout4"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="64dp" android:id="@+id/Void"
@@ -61,7 +62,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnPoint"
                 android:layout_width="wrap_content"
@@ -71,7 +72,7 @@
                 android:textColor="#090000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnEqual"
                 android:layout_width="wrap_content"
@@ -79,7 +80,7 @@
                 android:layout_weight="1"
                 android:text="@string/but_equal"
                 android:textSize="24sp"
-                android:backgroundTint="#03A9F4"/>
+                android:backgroundTint="#FF803C" android:fontFamily="serif"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -97,7 +98,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btn2"
                 android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btn3"
                 android:layout_width="wrap_content"
@@ -117,17 +118,17 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnDivision"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_division"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -145,7 +146,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btn5"
                 android:layout_width="wrap_content"
@@ -155,7 +156,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btn6"
                 android:layout_width="wrap_content"
@@ -165,17 +166,17 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnMultiply"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_multiply"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -193,7 +194,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif" android:inputType="number"/>
         <Button
                 android:id="@+id/btn8"
                 android:layout_width="wrap_content"
@@ -203,7 +204,7 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btn9"
                 android:layout_width="wrap_content"
@@ -213,17 +214,17 @@
                 android:textColor="#040000"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_minus"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -237,38 +238,38 @@
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_AC"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="18sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:text="@string/but_backspace"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp" android:id="@+id/btnBackspace"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="30sp"
                 android:background="@android:color/transparent"
                 android:paddingTop="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnPercent"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_percent"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="20sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif"/>
         <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:text="@string/but_plus"
-                android:textColor="#03A9F4"
+                android:textColor="#FF803C"
                 android:textSize="24sp"
                 android:background="@android:color/transparent"
-        />
+                android:fontFamily="serif" android:paddingLeft="0dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
